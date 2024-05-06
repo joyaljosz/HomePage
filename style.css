@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;    
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(73, 151, 240);
+    transform: skew(0deg,-10deg);
+    top: -480px;
+    z-index: -1;
+    box-shadow: 0px 2px 6px gray;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 50px;
+    max-width: 1200px;
+    box-sizing: content-box;
+}
+
+header img{
+    max-height: 500px;
+}
+
+.img-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 8px;
+}
+
+.about{
+    background-color: white;
+    box-shadow: 0px 2px 6px gray;
+    padding: 15px 20px 20px 20px;
+}
+
+about p{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+h1{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.social-media{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.container{
+    margin: 70px 50px;
+    max-width: 1200px;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.screen{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 30px 30px 50px 30px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+h4{
+    font-weight: 500;
+}
+
+.card-text {
+    padding: 10px;
+    box-shadow: 0px 2px 6px gray;
+    background-color: white;
+}
+
+.card-text p {
+    font-size: 12px;
+    color: #565656;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    background-color: rgb(73, 151, 240);
+    color: white;
+    padding: 30px 30px 50px 30px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+
+@media screen and (max-width: 1200px) {
+/* 
+    .img-container{
+        float: left;
+        margin-left: -40px;
+        margin-right: 15px;
+        box-shadow: 0px 2px 6px gray;
+    } */
+
+    .card-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .screen{
+        font-size: 18px;
+    }
+    .card-text p {
+        font-size: 10px;
+    }
+    .text{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-media{
+        display: none;
+    }
+    .img-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .name{
+        font-size: 24px;
+        background-color: transparent;
+        bottom: 0px;
+        top: 10px;
+        right: -300px;
+    }
+    .about{
+        font-size: 18px;
+    }
+    .footer{
+        font-size: 18px;
+    }
+    .contact{
+        font-size: 18px;
+    }
+    .social-media{
+        font-size: 18px;
+    }
+    .img-container{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 24px;
+    }
+    .about{
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+    .back{
+        top: -620px;
+    }
+    header{
+        min-width: 320px;
+        max-width: 600px;
+    }
+
+    .card-container, header, footer, .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-text p {
+        font-size: 10px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    .text{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact{
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-media{
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .name{
+        font-size: 24px;
+    }
+    .about{
+        font-size: 18px;
+        z-index: -2;
+
+    }
+    .footer{
+        font-size: 18px;
+        padding: 15px 0px 0px 0px;
+        min-width: 320px;
+    }
+    .contact{
+        font-size: 18px;
+    }
+}
